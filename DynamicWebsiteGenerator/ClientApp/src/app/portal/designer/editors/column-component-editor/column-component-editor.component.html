@@ -1,0 +1,46 @@
+<div class="row">
+  <div class="col">
+    <h4>Colomns In This Piece</h4>
+  </div>
+
+  <div class="col">
+    <app-new-piece (onSave)="newSave($event,true)" [(parentId)]=piece.id></app-new-piece>
+  </div>
+</div>
+
+
+
+<div class="row">
+  <div class="col" *ngFor="let p of piece.data.inner">
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">{{getName(p)}}</h5>
+        <h6 class="card-title">{{getType(p)}}</h6>
+        <button>Delete Piece</button>
+        <button (click)="goToPage(p)">Go To</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col">
+    <h4>Rows In This Piece</h4>
+  </div>
+
+  <div class="col">
+    <app-new-piece (onSave)="newSave($event,false)" [(parentId)]=piece.id></app-new-piece>
+  </div>
+</div>
+
+<div *ngFor="let p of piece.data.next">
+  <div class="row">
+    <div class="col">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">{{p.name}}</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

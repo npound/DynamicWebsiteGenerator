@@ -1,0 +1,36 @@
+<div>
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb" >
+            <li class="breadcrumb-item" (click)='gotoPiece(b.id)'><a href="Portal/Designer">Designer</a></li>
+          <li *ngFor="let b of breadcrumbs" class="breadcrumb-item" (click)='gotoPiece(b.id)'><a>{{b.name}}</a></li>
+        </ol>
+      </nav>
+
+
+<div *ngIf="site && navigating == false">
+  <app-new-page (onSave)="newSave($event)"></app-new-page>
+
+
+  <div class="row" *ngFor="let page of site.pages">
+<div class="col">
+  <a (click)="gotoPage(page)">{{page.pageName}} {{page.route}}</a>
+  </div>
+
+  <div class="col">
+    <button>Delete Page</button>
+    </div>
+  </div>
+</div>
+<div *ngIf="site && navigating == true">
+    <app-navigator
+    [(piece)]=currentPiece
+    (changedPiece)=changePiece($event)
+    (goToPage)=gotoPiece($event)>
+
+
+
+    </app-navigator>
+</div>
+
+</div>

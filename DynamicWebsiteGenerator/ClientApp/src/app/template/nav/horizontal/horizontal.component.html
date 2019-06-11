@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="col">
+    <img src="{{banner}}" class="img-fluid" style=" width: 100%; max-height: 200px; min-height: 125px" />
+  </div>
+</div>
+
+<div class="row nav-bg">
+  <div class="col-xl-2 nav-bg" style="z-index: 1;">
+    <a class="navbar-brand" href="#">
+      <img  height="30" alt="">
+    </a>
+  </div>
+  <div class="col-xl-10 nav-bg">
+    <nav class="nav flex-column flex-sm-row justify-content-center">
+      <div *ngFor="let page of site.pages">
+        <a class="flex-sm-fill text-sm-center nav-link" routerLink="/{{page.route}}">{{page.name}}</a>
+      </div>
+    </nav>
+  </div>
+  <div class="row">
+    <div class="col">
+      <hr class="mx-4">
+    </div>
+  </div>

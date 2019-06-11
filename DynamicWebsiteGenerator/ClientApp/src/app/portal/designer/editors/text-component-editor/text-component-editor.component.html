@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col">
+    <label for="textTypeSelect">Text Type</label>
+    <select [(ngModel)]='textType' class="custom-select custom-select-lg mb-3" id='textTypeSelect'
+      aria-placeholder="Piece Type">
+      <option value="7">Label</option>
+      <option value="8">Paragraph</option>
+      <option value="1">Header 1</option>
+      <option value="2">Header 2</option>
+      <option value="3">Header 3</option>
+      <option value="4">Header 4</option>
+      <option value="5">Header 5</option>
+      <option value="6">Header 6</option>
+
+    </select>
+  </div>
+</div>
+
+<div class="row">
+
+  <div class="col">
+    <input *ngIf="piece.textType != 8" [(ngModel)]='piece.data.text' class="form-control" placeholder="Text" />
+    <textarea *ngIf="piece.textType == 8" [(ngModel)]='piece.data.text' class="form-control"
+      placeholder="Text"></textarea>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col">
+    <button type="button" class="btn btn-primary" (click)="save()">Save</button>
+    <button type="button" class="btn btn-secondary" (click)="reset()">Reset</button>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+
+  <div class="row">
+    <div class="col">
+        <div *ngFor="let p of piece.data.inner">
+      <ng-template appInnerPieceHostDirective></ng-template>
+    </div>
+    </div>
+  </div>
+
+
+<div *ngFor="let p of piece.data.next">
+  <div class="row">
+    <div class="col">
+      <ng-template appNextPieceHost></ng-template>
+    </div>
+  </div>
+</div>

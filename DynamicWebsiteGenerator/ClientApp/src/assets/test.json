@@ -1,0 +1,68 @@
+{
+    "nav": {
+        "type": 1
+    },
+    "pages": [
+        {
+            "route":"Home",
+            "name":"Home",
+            "type": 1,
+            "data": {
+                "inner": [
+                   "A","B","C"                
+                ]
+            },
+            "id":"P",
+            "parent":"P"
+
+        }
+
+    ],
+    "pieces":[
+        {
+            "page":"P",
+            "parent":"B",
+            "id":"W",
+            "type": 101,
+            "data": {"text":"test"},
+            "textType":1,
+            "name":"text W"
+        },
+        {
+            "page":"P",
+            "parent":"P",
+            "id":"A",
+            "type": 1,
+            "data":{
+                "inner":[],
+                "next":[]
+            },
+            "name":"Col A"
+        },
+        {
+            "page":"P",
+            "parent":"P",
+            "id":"B",
+            "type": 1,
+            "data": {
+                "inner":[
+                   "W"
+                ],
+                "next":[]
+            },
+            "name":"Col B"
+        },
+        {
+            "page":"P",
+            "parent":"P",
+            "id":"C",
+            "type": 1,
+            "data":{
+                "inner":[],
+                "next":[]
+            },
+            "name":"Col C"
+        }
+    ]
+
+}

@@ -1,0 +1,11 @@
+<div class="row">
+
+</div>
+
+<div *ngIf="piece.type == 1">
+
+<app-column-component-editor [piece]='piece'  (goToPage)=goToPage($event)></app-column-component-editor>
+</div>
+<div *ngIf="piece.type == 101">
+  <app-text-component-editor [piece]='piece'></app-text-component-editor>
+</div>

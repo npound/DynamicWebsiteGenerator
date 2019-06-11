@@ -1,0 +1,47 @@
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#newPieceModal">
+  Create Piece
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="newPieceModal" tabindex="-1" role="dialog" aria-labelledby="newPieceModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="newPieceModalLabel">Create Piece</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+
+          <div class=row>
+            <div class=col>
+              <label>Piece Name</label>
+            </div>
+            <div class=col>
+              <input [(ngModel)]=name />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <select [(ngModel)]='pieceType' class="custom-select custom-select-lg mb-3" aria-placeholder="Piece Type">
+                <option value="1">Column</option>
+                <option value="100">Image</option>
+                <option value="101">Text</option>
+                <option value="102">Html</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" #btn>Close</button>
+        <button type="button" class="btn btn-primary" (click)="save()">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
