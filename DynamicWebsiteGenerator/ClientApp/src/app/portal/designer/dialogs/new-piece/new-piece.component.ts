@@ -43,6 +43,7 @@ newPiece.data.next = [];
     case "101":
     newPiece = new TextComponent();
     (<TextComponent>newPiece).textType = 1;
+    newPiece.data = new Data();
     newPiece.data.text = "";
       break;
 

@@ -1,6 +1,5 @@
 import { Component, OnInit, ViewChild, ViewChildren, QueryList, ComponentFactoryResolver, Input, Type } from '@angular/core';
 import { InnerPieceHostDirective } from './directive/innerpiecehost.directive';
-import { Piece } from './/models/piece';
 import { TemplateType } from './enum/templatetype.enum';
 import { ImageComponent } from './layout/image/image.component';
 import { HtmlComponent } from './layout/html/html.component';
